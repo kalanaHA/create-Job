@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Create</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body">
+
+<main>
+  <div class="container">
+    <button id="open_modal" class="open_modal">Open Modal</button>
+    <div id="cardContainerWindow" class="card-container-window" style="display: none;">
+      <div class="card-header"><b>New Job</b></div>
+      <hr>
+      <div id="cardContainer" class="card-container">
+        <div class="card" id="card1">
+          <div class="card-header1"><b>Select a client</b></div>
+          <input type="text" id="searchBar" class="searchBar" placeholder="Search...">
+          <table id="clientTable" class="clientTable">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Organization</th>
+                <th>Code</th>
+                <th>Handler</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <div class="card-footer">
+            <div class="pagination-info">
+              <p id="dataCount">1-5 of 12 </p>
+            </div>
+            
+            <div class="pagination">
+              <button id="previousPageButton" class="paginationButton"><</button>
+              <button id="nextPageButton" class="paginationButton">></button>
+            </div>
+          </div>
+          
+        </div>
+        <div class="card" id="card2">
+          <div class="optionList">
+            <label for="templateSelect">Select a template:</label>
+            <select id="templateSelect" class="templateSelect">
+              <option value="none">Select Template</option>
+              <option value="template1">Template 1</option>
+            </select>
+          </div>
+          <div id="templateFields" style="display: none;">
+            <div class="optionList">
+              <label for="templateSelect">Views:</label>
+              <select id="templateSelect" class="templateSelect">
+                <option value="none">Select a View</option>
+                <option value="view1">View 1</option>
+              </select>
+            </div>
+            <div class="additional-fields">
+              <div class="column">
+                <label>Copy</label>
+                <div class="copy-column">
+                  <label for="copy1">
+                    <input type="checkbox" id="copy1"> Dates
+                  </label>
+                  <label for="copy2">
+                    <input type="checkbox" id="copy2"> Status
+                  </label>
+                  <label for="copy1">
+                    <input type="checkbox" id="copy1"> Billing Plans
+                  </label>
+                  <label for="copy1">
+                    <input type="checkbox" id="copy1"> Activities
+                  </label>
+                  <label for="copy1">
+                    <input type="checkbox" id="copy1"> Phase Quotes
+                  </label>
+                  <label for="copy1">
+                    <input type="checkbox" id="copy1"> Stage
+                  </label>
+                </div>
+              </div>
+              <div class="column">
+                <label>Includes</label>
+                <div class="includes-column">
+                  <label for="in1">
+                    <input type="checkbox" id="in1"> Time
+                  </label>
+                  <label for="in2">
+                    <input type="checkbox" id="in2"> Material
+                  </label>
+                  <label for="in1">
+                    <input type="checkbox" id="in1"> Purchase
+                  </label>
+                  <label for="in1">
+                    <input type="checkbox" id="in1"> Use Actual Values
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="phasesToCopy">
+              <label>Phases to copy</label>
+              <div class="phases">
+                <table class="clientTable1">
+                  <tr>
+                    <th></th>
+                    <th>Phase</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <th><input type="checkbox" id="in1"></th>
+                    <td>001</td>
+                    <td>Pase Description</td>
+                  </tr>
+                  <tr>
+                    <th><input type="checkbox" id="in1"></th>
+                    <td>002</td>
+                    <td>Pase Description</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+        <div class="card" id="card3">
+            <div class="card-header"><b>Extra Options</b></div>
+            <label class="extraOpt">
+              <input type="checkbox" id="ojn"> Own Job Number
+            </label>
+
+            <div class="handler">
+              <label>Handler</label>
+              <div class="handlerList">
+                <label class="handlerlabel">
+                  <input type="radio" id="page1" name="pages" class="page-radio" value="1" checked> Client default handler
+                </label>
+                <label class="handlerlabel">
+                  <input type="radio" id="page1" name="pages" class="page-radio" value="2" checked> Current user
+                </label>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+      <hr>
+      <div class="page-navigation">
+        <input type="radio" id="page1" name="pages" class="page-radio" value="1" checked>
+      </div>
+      <button id="nextButton" class="nextButton" style="display: none;">Next</button>
+      <button id="createButton" class="createButton" style="display: none;">Create Job</button>
+    </div>
+  </div>
+</main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
