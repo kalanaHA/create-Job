@@ -34,6 +34,7 @@ main {
     margin-bottom: 10px;
   }
 
+  /* common button design */
   button {
     padding: 10px 18px;
     background-color: #16b8e0;
@@ -47,11 +48,13 @@ main {
     }
   }
 
+  /* open model button */
   .open_modal {
     margin-top: 400px;
     border-radius: 8px;
   }
 
+  /* next button */
   .nextButton {
     margin-top: -23px;
     margin-left: 500px;
@@ -61,6 +64,7 @@ main {
     width: 75px;
   }
 
+  /* create job button */
   .createButton {
     margin-top: -23px;
     margin-left: 500px;
@@ -75,6 +79,7 @@ main {
     margin-left: 250px;
   }
 
+  /* main card design */
   .card-container-window {
     display: flex;
     flex-direction: column;
@@ -93,7 +98,6 @@ main {
   .card-container {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     background-color: #ffffff;
   }
 
@@ -109,6 +113,7 @@ main {
     border-radius: 0 0 20px 20px;
   }
 
+  /* searchbar design */
   .searchBar {
     padding: 8px;
     width: 550px;
@@ -134,14 +139,13 @@ main {
   }
 
   #card2::-webkit-scrollbar {
-    width: 0; /* Hide the default scrollbar */
+    width: 0; 
     height: 0;
   }
 
-  /* CSS for table and pagination */
+/* table and pagination */
 .clientTable {
   width: 550px;
-  /* border-collapse: collapse; */
   margin-top: 10px;
   border-radius: 20px 20px 0 0;
   border: 1px solid #ccc;
@@ -154,13 +158,12 @@ main {
 }
 
 .clientTable th {
-  /* background-color: #f2f2f2; */
   font-weight: bold;
 }
 
+/* Phases to copy design */
 .clientTable1 {
   width: 550px;
-  /* border-collapse: collapse; */
   margin-top: 10px;
   border-radius: 15px 15px 0 0;
   border: 1px solid #ccc;
@@ -178,11 +181,11 @@ main {
   text-align: center;
 }
 
+/* pagination element design */
 .pagination {
   margin: -30px 0 0 450px ;
   display: flex;
   padding: 3px;
-  /* justify-content: end; */
 }
 
 .pagination-info {
@@ -225,9 +228,7 @@ main {
   padding-top: 5px;
 }
 
-/* Existing CSS styles */
-
-/* New styles for the additional columns */
+/* styles for the additional columns */
 .additional-fields {
   display: flex;
   margin-top: 20px;
@@ -235,7 +236,6 @@ main {
 
 .additional-fields .column {
   flex: 2;
-  /* padding: 0 30px 0 50px; */
   padding-left: 10px;
 }
 
@@ -255,12 +255,11 @@ main {
   padding-top: 10PX;
 }
 
-/* Adjust these styles based on your design needs */
-
 .phasesToCopy {
   padding-top: 10px;
 }
 
+/* checkbox design */
 input[type="checkbox"] {
   transform: scale(1.5);
   width: 10px;
@@ -272,6 +271,7 @@ input[type="checkbox"] {
   padding-left: 10px;
 }
 
+/* handler designs */
 .handler {
   padding: 10px;
   margin-top: 30px;

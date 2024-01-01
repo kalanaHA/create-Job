@@ -14,7 +14,7 @@ function showNextCard() {
   const currentCard = document.getElementById(`card${currentCardIndex}`);
   currentCard.style.display = 'block';
 
-  // Hide or show the Next button based on the current card
+  // Hide or show the Next button 
   if (currentCardIndex === totalCards) {
     nextButton.style.display = 'none';
   } else {
@@ -28,6 +28,7 @@ function showNextCard() {
 
 }
 
+//dump data for table view
 const data = [
   { organization: 'Facebook', code: 'FBKL', handler: 'Cristoper Dalvis' },
   { organization: 'Youtube', code: 'YT', handler: 'Olivia Wilson' },
@@ -86,6 +87,7 @@ function populateTable(data, currentPage) {
     tableBody.appendChild(row);
     });
 
+    //pagination info get part
    const totalEntries = data.length;
    const startEntry = Math.min(startIndex + 1, totalEntries);
    const endEntry = Math.min(startIndex + currentPageData.length, totalEntries);
@@ -130,6 +132,7 @@ openModalButton.addEventListener('click', () => {
   populateTable(data, currentPage);
 });
 
+// Event listener for the searchBar
 searchBar.addEventListener('input', () => {
   const searchTerm = searchBar.value.toLowerCase();
   const filteredData = data.filter(item =>
@@ -146,10 +149,12 @@ nextButton.addEventListener('click', () => {
   currentCard.style.display = 'none';
   console.log('Card', currentCardIndex);
 
+  //add condition for display fields 
   if (currentCardIndex === 1) {
     templateFields.style.display = 'none';
   }
 
+  //add condition for display create button
   if (currentCardIndex === 2) {
     createButton.style.display = 'block';
   }
@@ -160,6 +165,7 @@ nextButton.addEventListener('click', () => {
     showNextCard();
   }
 
+  //add radio button for pagination
   const currentPageRadio = document.getElementById(`page${currentCardIndex}`);
   if (currentPageRadio) {
     currentPageRadio.checked = true;
@@ -167,6 +173,7 @@ nextButton.addEventListener('click', () => {
 
 });
 
+// Function to show previous page
 function showPreviousPage() {
   if (currentPage > 1) {
     currentPage--;
@@ -174,6 +181,7 @@ function showPreviousPage() {
   }
 }
 
+// Function to show next page
 function showNextPage() {
   const maxPage = Math.ceil(data.length / itemsPerPage);
   if (currentPage < maxPage) {
